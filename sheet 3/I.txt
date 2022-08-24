@@ -1,0 +1,152 @@
+/*
+--- ----   |---- ---- --  --
+--| |--|   |--   |--  | \/ |
+--- |  | ----|   ---- |    |
+ 
+  3ASEM 3ALAA ELDEEN
+ 
+ */
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define loopu(i, j, q)   for(ll i=(j); i<=(q); i++) 
+#define loopd(i, n, j)   for(int i=(n); i>=(j); i--)
+#define in   cin
+#define ou   cout
+#define o     <<
+#define  z    >>
+/*ll gcd(ll a, ll b) {
+  if (b == 0)
+    return a;
+  return gcd(b, a % b);
+}
+ 
+ll lcm(ll a, ll b)
+{
+    return (a / gcd(a, b)) * b;
+}
+int Sprime(int num)
+{
+    int t = 0;
+ 
+    for (int i = 2; t < 2 && i * i <= num; ++i)
+        while (num % i == 0)
+            num /= i, ++t; 
+    if (num > 1)
+        ++t;
+    return t == 2;
+}
+ 
+int su(string s){ 
+int c=0;
+loopu(i,0,s.length()-1){
+  c=c+s[i]-'0';
+}
+return c;
+}*/
+ 
+/*ll ph(ll n){
+  double y=sqrt(n);
+  int m=y;
+   ll k;
+  ll g=n;
+  for(ll i=m;g<2*n;i++){
+     k=i;
+    g=(i*i)+i;
+  }
+  return k ;
+}*/
+/*int rep (string s){
+int c[96]={0};
+bool f=true;
+loopu(i,0,s.size()-1){
+  c[int(s[i])-97]++;
+}
+sort(c,c+96);
+int k=c[95];
+if(k==s.size()) f=false;
+ 
+return f;
+}
+int po (string s){
+bool ch=false;
+int fi=0,in=0;
+string h;
+//xyxxyxxyxxyx
+for(int i=2;2*i<=s.size();i++){
+  if(s.substr(0,i)==s.substr(i,i)){
+    h=s.substr(0,i);
+    fi+=2;
+    ch=true;
+    in=i;
+    break;
+    }
+}
+if(ch){
+for(int i=in*2;i+in<=s.size();i+=in){
+  if(h!=s.substr(i,in)){
+    ch=false;
+    break;
+  }
+  else fi++;
+}}
+if(fi%2!=0)ch=false;
+return ch;
+}
+/*int stringtoi(string s)
+{
+    int m = 0 ;
+    int y = 1;
+    for(int i = s.size()-1 ; i >=0 ; i--)
+    {
+        m+= (s[i]-'0') * y ;
+        y*=10 ;
+    }
+    return m ;
+}*/
+/*ll facto(int x){
+  ll sum=1;
+  loopu(i,1,x) sum=sum*i;
+  return sum;
+}*/
+/*ll mod(string s, ll n)
+{
+    ll res = 0;
+ 
+    loopu (i,0, s.length()-1)
+        res = (res * 10 + (int)s[i] - '0') % n;
+ 
+    return res;
+}*/
+ll sm(int n){
+  int arr[n];
+  vector<int>v;
+loopu(i,0,n-1){
+  cin>>arr[i];
+}
+/*1
+4
+20 1 9 4*/
+loopu(i,0,n-1){
+ loopu(j,i,n-1){
+ if(i!=j)v.push_back(arr[i]+arr[j]+j-i);
+ //cout<<arr[i]<<" "<<arr[j]<<" "<<j<<" "<< i<<" "<<arr[i]+arr[j]+j-i<<'\n';
+}
+}
+sort(v.begin(),v.end());
+return *v.begin();
+}
+int main()
+{
+//freopen("game.in","r",stdin);
+cin.tie(0);
+cin.sync_with_stdio(0);
+int t,n;
+cin>>t;
+while(t--){
+  cin>>n;
+  cout<<sm(n)<<"\n";
+}
+     return 0;
+}
+ 

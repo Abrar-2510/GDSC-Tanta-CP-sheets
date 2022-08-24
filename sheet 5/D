@@ -1,0 +1,36 @@
+// A school method based C++ program to
+// check if a number is prime
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+
+int isPrime(int n)
+{
+int x= sqrt(n);
+	// Corner case
+	if (n <= 1){
+   return false;
+  }
+	
+
+else if (x%2 != 0){
+	return true;
+    }
+
+}
+
+// Driver Code
+int main()
+{
+int n;
+cin>>n;
+if (isPrime(n)){
+cout<< "YES";
+}
+else{
+  cout<< "NO";
+}
+	return 0;
+}

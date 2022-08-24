@@ -1,0 +1,42 @@
+#include <iostream>
+#include<cmath>
+#include<algorithm>
+#include<vector>
+
+using namespace std;
+
+bool isodd(int x){
+  if (x%2 !=0){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+bool isPalindrome(unsigned n)
+{
+    unsigned rev = 0;
+
+    unsigned k = n;
+    while (k)
+    {
+        rev = (rev << 1) | (k & 1);
+        k = k >> 1;
+    }
+    return n == rev;
+}
+
+// Driver Code
+int main()
+{
+int num ;
+cin>> num;
+if(isodd (num) && isPalindrome (num)){
+ cout << "YES";
+}
+
+else{
+  cout<< "NO";
+}
+}

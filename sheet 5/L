@@ -1,0 +1,23 @@
+// A school method based C++ program to
+// check if a number is prime
+#include <bits/stdc++.h>
+using namespace std;
+
+int arr(){
+  int A,B;
+int arr1=[A];
+cin>> [A];
+int arr2=[B];
+
+cin>> [B];
+cout<< [A]<< " " << [B];
+return 0;
+}
+int main(){
+  arr();
+int size;
+cin>> size;
+
+}
+
+	
